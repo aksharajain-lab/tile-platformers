@@ -1,106 +1,115 @@
-<p align="center">
-  <img src="public/logo192.png" alt="Phaser Platformer">
-</p>
+# LOOPBACK- Tile Platformers
+### The past is your only way forward.
 
-# Phaser Platformer
+**What if you could play alongside the person you were ten seconds ago?**
 
-[![release](https://img.shields.io/github/v/release/remarkablegames/phaser-platformer)](https://github.com/remarkablegames/phaser-platformer/releases)
-[![build](https://github.com/remarkablegames/phaser-platformer/actions/workflows/build.yml/badge.svg)](https://github.com/remarkablegames/phaser-platformer/actions/workflows/build.yml)
+LOOPBACK is a time-loop puzzle platformer where every run leaves behind a ghost of your previous actions. Learn the level, experiment with movement, and turn your past attempts into the key to your next move.
 
-<kbd>phaser-platformer</kbd> is a template for making [Phaser](https://phaser.io/) platformer games. The template is inspired by [`phaser-3-tilemap-blog-posts`](https://github.com/mikewesthad/phaser-3-tilemap-blog-posts/tree/master/examples/post-2) (read the [Medium story](https://itnext.io/3d68e73d494a)).
+Your previous self isn't a replay to watch.
 
-Play in your browser:
+**It's part of the puzzle.**
 
-- [remarkablegames](https://remarkablegames.org/phaser-platformer/)
+---
 
-Or download for desktop:
+## ◈ The Concept
 
-- [Windows](https://github.com/remarkablegames/phaser-platformer/releases/latest/download/windows.zip)
-- [macOS](https://github.com/remarkablegames/phaser-platformer/releases/latest/download/macos.zip)
-- [Linux](https://github.com/remarkablegames/phaser-platformer/releases/latest/download/linux.zip)
+You have a limited window to move through the world. When the loop resets, your previous run returns as a ghost, repeating the actions you recorded.
 
-## Prerequisites
+While your past self follows its path, you control the present.
 
-[nvm](https://github.com/nvm-sh/nvm#installing-and-updating):
+Each loop gives you another opportunity to coordinate with your past actions, discover solutions, and push further into the level.
 
-```sh
-brew install nvm
-```
+The central question is simple:
 
-## Install
+*Can you solve a puzzle that requires you to work with yourself?*
+
+## ◈ Core Gameplay
+
+- **Time-loop system** — Work within a repeating 10-second window.
+- **Ghost replays** — Your previous run becomes a translucent replay of your movements.
+- **Persistent consequences** — Use recorded actions as part of your approach to a puzzle.
+- **Iteration over perfection** — Learn through experimentation, one loop at a time.
+
+*Gameplay features are being developed in stages. Check the roadmap below for current implementation status.*
+
+## ◈ The Vision
+
+LOOPBACK is built around one central mechanic: **your past actions change how you approach the present.**
+
+The goal is to develop this into a puzzle platformer where timing, spatial awareness, and coordination between past and present selves matter more than speed alone.
+
+No two attempts need to feel wasted. Every run can teach you something.
+
+## ◈ Development Roadmap
+
+- [ ] Implement the 10-second loop timer.
+- [ ] Record and replay the previous player run as a translucent ghost.
+- [ ] Reset the player cleanly between loops.
+- [ ] Add interactive puzzle elements that can respond to ghost actions.
+- [ ] Design levels around coordination between multiple runs.
+- [ ] Add a level-completion condition and restart flow.
+- [ ] Polish visuals, feedback, and audio.
+- [ ] Publish a playable web build.
+
+This roadmap reflects planned development; completed items will be checked off as they become playable and tested.
+
+## ◈ Built With
+
+- **[Phaser](https://phaser.io/)** — 2D game framework.
+- **[TypeScript](https://www.typescriptlang.org/)** — Typed game logic.
+- **[Vite](https://vite.dev/)** — Development server and build tooling.
+
+## ◈ Getting Started
+
+### Prerequisites
+
+- [Node.js](https://nodejs.org/) compatible with the project's requirements.
+- npm.
+
+### Installation
 
 Clone the repository:
 
-```sh
-git clone https://github.com/remarkablegames/phaser-platformer.git
-cd phaser-platformer
+```bash
+git clone https://github.com/aksharajain-lab/tile-platformers.git
+cd tile-platformers
 ```
 
-Install the dependencies:
+Install dependencies:
 
-```sh
+```bash
 npm install
 ```
 
-Rename the game:
+Start the development server:
 
-```sh
-git grep -l phaser-platformer | xargs sed -i '' -e 's/phaser-platformer/my-game/g'
+```bash
+npm run dev
 ```
 
-```sh
-git grep -l 'Phaser Platformer' | xargs sed -i '' -e 's/Phaser Platformer/My Game/g'
-```
+Open the local URL printed in your terminal.
 
-Update the files:
+**Note:** Available scripts may vary as development progresses. Check `package.json` for the exact commands supported by the current version.
 
-- [ ] `README.md`
-- [ ] `index.html`
-- [ ] `package.json`
-- [ ] `public/*.png`
-- [ ] `public/manifest.webmanifest`
-- [ ] `src/main.ts`
+## ◈ Controls
 
-## Environment Variables
+Movement controls are inherited from the existing platformer starter and may evolve during development. Check the in-game help or current implementation for the active key bindings.
 
-Update the environment variables:
+## ◈ Project Status
 
-```sh
-cp .env .env.local
-```
+**In active development.**
 
-Update the **Secrets** in the repository **Settings**.
+LOOPBACK is being built incrementally from a Phaser platformer foundation. The immediate focus is getting the core time-loop and ghost-replay mechanic working reliably before expanding the puzzle systems.
 
-## Available Scripts
+## ◈ Why LOOPBACK?
 
-In the project directory, you can run:
+Most platformers ask you to overcome the world.
 
-### `npm start`
+LOOPBACK asks you to coordinate with the person you used to be.
 
-Runs the game in the development mode.
+**Every loop leaves a trace. Make yours count.**
 
-Open [http://localhost:5173](http://localhost:5173) to view it in the browser.
+---
 
-The page will reload if you make edits.
+Created by [Akshara Jain & Daksh Sharma] for a game-development hackathon.
 
-You will also see any errors in the console.
-
-### `npm run build`
-
-Builds the game for production to the `dist` folder.
-
-It correctly bundles in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.
-
-Your game is ready to be deployed!
-
-### `npm run bundle`
-
-Builds the game and compresses the contents into a ZIP archive in the `dist` folder.
-
-Your game can be uploaded to your server, [itch.io](https://itch.io/), etc.
-
-## License
-
-[MIT](LICENSE)
